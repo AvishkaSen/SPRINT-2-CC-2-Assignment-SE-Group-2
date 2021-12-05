@@ -1,4 +1,4 @@
-#[SPRINT 2] CC-2 FUTURESEEKERS Assignment (SE GROUP-02)
+# [SPRINT 2] CC-2 FUTURESEEKERS Group Assignment (SE GROUP-02)
 
 Sprint 2 roles: 
 
