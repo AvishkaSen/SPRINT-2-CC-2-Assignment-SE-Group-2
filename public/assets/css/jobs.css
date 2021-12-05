@@ -1,0 +1,24 @@
+.ads{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    padding: 30px 10%;
+}
+.ads .card{
+    background: rgba(56, 48, 48, 0.308);
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+}
+.ads .card .img{
+    width: 90%;
+}
+.ads .card ul li{
+    background: rgba(56, 48, 48, 0.308);
+    color: #fff;
+}
+.card .card-body .card-title{
+    padding: 3px;
+    font-size: 25px;
+    border-bottom: 3px solid #fff;
+    width: max-content;
+}

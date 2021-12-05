@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap');
+
+/*body*/
+.bx1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    background: rgba(128, 255, 0, 0.26);
+    margin: 40px 10%;
+    border-radius: 50px;
+}
+.bx1 img{
+    width: 75%;
+    height: 500px;
+    position: relative;
+    left: 0;
+}
+.bx1 .cnt1{
+    padding: 10px 20px;
+}
+.bx1 .cnt1 .admin-head{
+    font-size :25px;
+}
+.bx1 .cnt1 span{
+    color:rgb(247, 112, 35);
+    font-weight: bold;
+    font-size:  20px;
+}
+.bx1 .cnt1 h2 {
+    color: rgb(82, 0, 107);
+    font-size:  40px;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+}
+.bx1 .cnt1 .dashboard .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(232, 46, 46, 0.25);
+    margin: 25px 0;
+    padding: 10px 5px;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out white;
+    cursor: pointer;
+    width: 80%;
+}
+.bx1 .cnt1 .dashboard .btn:hover{
+    background: rgba(234, 113, 113, 0.65)
+}
+
+.bx2{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15%;
+}
+.bx2 h2{
+    font-size: 30px;
+    position: relative;
+    left: 45%;
+}
+.bx2 .cnt2{
+    margin: 10px 10px;
+}
+.bx2 .cnt2 ul li{
+    padding: 20px;
+    margin: 5px;
+    display: inline-flex;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.bx2 .cnt2 ul li:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+.bx2 .cnt2 ul li i{
+    margin: 5px;
+}
+.cnt3 input{
+    border: 0;
+    outline: none;
+}
+.search_wrap{
+    width: 100%;
+    margin: 30px auto;
+}
+.search_wrap .search-bx{
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+.search_wrap .search-bx input{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+}
+.search_wrap .search-bx .btn-search{
+    position:absolute;
+    top: 0;
+    right: 20%;
+    width: 40px;
+    height: 100%;
+    background: rgba(137, 43, 226, 0.63);
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.search_wrap .search-bx .btn-search:hover{
+    background: blueviolet;
+}
+.search_wrap .search-bx .btn-search .fa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+.bx3{
+    height: 500px;
+    width: auto;
+    margin: 5px 10%;
+    padding: 10px 10px;
+}
+.bx3 .bx3-head{
+    font-size: 30px;
+    position: relative;
+    left: 45%;
+    margin-bottom: 15px;
+    margin-left :5px; ;
+}
+.bx3 .cnt4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card{
+    color: #fff;
+    background: rgba(128, 255, 0, 0.26);
+    height: fit-content;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    margin: 10px;
+    border-radius: 20px;
+    overflow:hidden;
+    transition: transform 500ms ease;
+    
+}
+
+.card:hover,
+.card:focus-within{
+    transform: scale(1.05);
+}
+
+/* //////////////////// HOME PAGE CARDS BACKGROUND IMAGES ///////////////////// */
+.card1{
+    background-image: url(../img/career.jpeg);
+}
+.card2{
+    background-image: url(../img/jobs.jpeg);
+}
+
+.card3{
+    background-image: url(../img/resume.jpeg); 
+}
+
+.card4{
+    background-image: url(../img/interview.jpeg);
+}
+
+.card5{
+    background-image: url(../img/MAS.jpeg);
+}
+
+.card6{
+    background-image: url(../img/virtusa.jpeg);
+}
+
+.card7{
+    background-image: url(../img/johnkeels.jpg);
+}
+
+.card8{
+    background-image: url(../img/commercialbank.jpg);
+}
+
+/* //////////////////////////////////////////////////////////// */
+
+.card-container{
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        hsla(0, 0%, 0%, 0),
+        hsla(0, 0%, 0%, 0.2) 10%,
+        hsl(0, 0%, 0% , 1));
+    transform:translateY(54%);
+    transition: 500ms ease-in-out;
+}
+.card-container .button{
+    margin: 10px ;
+}
+.card:hover .card-container,
+.card:focus-within .card-container{
+    transform:translateY(0%);
+    transition-delay: 500ms;
+}
+.card:focus-within .card-container{
+    transition-duration: 0ms;
+}
+
+.card-container > * :not(.card-title){
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.card:hover .card-container > * :not(.card-title),
+.card:focus-within .card-container > * :not(.card-title){
+    opacity: 1;
+    transition-delay: 1000ms;
+}
+.card-title{
+    position: relative;
+    width: max-content;
+    font-size: 23px;
+}
+.card-title::after{
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    background: mediumspringgreen;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+.card:hover .card-title::after,
+.card:focus-within .card-title::after{
+    transform: scale(1);
+}
+.card-body{
+    color: #fff;
+}
+.button{
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    background:mediumspringgreen ;
+    padding: 0.5em 1.25em;
+    color: black;
+    border-radius: 10px;
+}
+.button:hover,
+.button:focus{
+    background: #fff;
+}

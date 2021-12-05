@@ -1,0 +1,71 @@
+h1, h2, h3{
+    padding: 2px;
+}
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0%;
+    background: linear-gradient(45deg, rgba(22, 114, 34, 0.87), rgba(71, 200, 20, 0.904),rgb(77, 238, 157));
+    padding: 10px 0 5px;
+    font-size: 15px;
+    z-index: 1;
+}
+footer .row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: white;
+}
+.row .col{
+    flex-basis: 25%;
+    padding: 10px;
+    color: white;
+}
+.row .col:nth-child(2),.row.col:nth-child(3){
+    flex-basis: 15%;
+}
+.row .desc .logo{
+    color: white;
+    width: auto;
+    margin-bottom: 30px;
+    border-bottom: 3px solid rgb(255, 255, 255);
+    width: max-content;
+    font-size: 20px;
+}
+.row .col .head {
+    color: white;
+    width: auto;
+    margin-bottom: 30px;
+    width: max-content;
+    font-size: 18px;
+}
+.col-s{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    color: white;
+}
+.col-s li{
+    padding: 0 5px;
+    font-size: 20px;
+    transition: ease-in-out 50ms;
+    font-size: 20px;
+    flex-basis: 25%;
+    color: white;
+}
+.col-s li:hover{
+    color: white;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.row .col ul li a{
+    text-decoration: none;
+    color: white;
+}

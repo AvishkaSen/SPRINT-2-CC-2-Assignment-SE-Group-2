@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+    background-image: url("../img/register.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+
+}
+
+.grid-bx{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-bx  .card{
+    position: relative;
+    left: 20%;
+    top: 10%;
+    width: 400px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.24);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 30px rgba(255, 0, 0, 0.25);
+    transition: 1s;
+}
+.grid-bx .card .details
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-bx  .card .details .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid-bx  .card .details .content .head{
+    position: relative;
+}
+.grid-bx  .card .details .content .frm{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 18px;
+}
+.grid-bx  .card .details .content .frm input
+{
+    padding: 5px;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+}
+.grid-bx  .card .details .content .frm .button{
+    padding: 5px;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+    background: none;
+    border: solid 1px #fff;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.grid-bx .card .details .content .frm .button:hover{
+    border: solid 1px rgb(0, 0, 0);
+    background: rgb(0,0,0);
+    color: #fff;
+}
+.grid-bx .bg-reg{
+    width: auto;
+    max-height: 500px;
+    margin: 40px;
+}
