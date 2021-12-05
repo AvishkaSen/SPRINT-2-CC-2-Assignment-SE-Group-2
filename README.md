@@ -1,11 +1,12 @@
-# [SPRINT 2] CC-2 FUTURESEEKERS Group Assignment (SE GROUP-02)
+# [SPRINT 2] CC-2 FUTURESEEKERS Group Assignment 
+## (SE_GROUP-02)
 
 Sprint 2 roles: 
 
-Mohammed Yahya -> SCRUM MASTER
-Dilki Delgoda -> QUALITY ASSURANCE
-Siduja Perera -> BUSINESS ANALYST
-Avishka Senanayake -> DEVELOPER
+- Mohammed Yahya -> SCRUM MASTER
+- Dilki Delgoda -> QUALITY ASSURANCE
+- Siduja Perera -> BUSINESS ANALYST
+- Avishka Senanayake -> DEVELOPER
 
 
 Methods of use:
