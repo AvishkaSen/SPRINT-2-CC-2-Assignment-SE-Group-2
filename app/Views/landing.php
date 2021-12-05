@@ -18,18 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         
     </head>
-
-    <style>
-
-        /* For message echoed when ad is deleted*/
-        .alert {
-            padding: 20px;
-            background-color: green;
-            color: white;
-            text-align: center;
-        }
-
-    </style>
+    
 
     <body>
         

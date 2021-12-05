@@ -42,12 +42,7 @@
       $session = session(); 
       $session -> destroy();
 
-      // account deleted message alert
-      echo '<div class="alert">
-      <strong> SUCCESS! </strong> Your Account and related job ads (if any) have been successfully deleted!
-      </div>';
-
-      // redirects user to the base landing page
+      // redirects user to the base landing page after account is deleted
       return redirect()->to('/');
       
     }
