@@ -12,7 +12,7 @@ Sprint 2 roles:
 Methods of use:
 
 - Go to your htdocs folder and create a file called 'futureseekers'
-- Pull this repository
+- And in that folder, pull this repository 
 - Start XAMPP Apache and MySQL service models 
 
 In the search bar the file directory, type 'cmd' (or powershell)
@@ -25,12 +25,12 @@ php spark db:seed AdminSeeder (add admin login data to database)
 php spark migrate:rollback (if you want to drop all tables)
 ```
 
-To go to the webpage, type in the address bar
+To go to the webpage, type in your browser address bar :
 ```
 http://localhost/futureseekers/public/
 ```
 
-Admin logins are:
+Admin logins from seeder file are:
 
     - admin123@admin.com
     - admin123
