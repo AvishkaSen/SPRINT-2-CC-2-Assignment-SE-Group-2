@@ -24,6 +24,7 @@
                 $advertid = $this->request->getPost('advertid'); 
                 $advertowner = $this->request->getPost('advertowner'); 
                 $applicantid = $this->request->getPost('applicantid'); 
+                $advertOwnerEmail = $this->request->getPost('advertemail'); // For sending email to advert owner
                 $fname = $this->request->getPost('fname'); 
                 $lname = $this->request->getPost('lname'); 
                 $email = $this->request->getPost('email'); 
@@ -53,9 +54,9 @@
 
 
                     // email notifications after user has applied ////////////
-                    $to = $advertowner;
+                    $to = $advertOwnerEmail;
                     $subject = 'New applicant for your ad number '.$advertid.'!';
-                    $emailmessage = 'Hello '.$advertowner.'! 
+                    $emailmessage = 'Hello '. $advertOwnerEmail .'! 
                                 <br> <br>'
                                 .$fname.' '.$lname.' has applied for your ad number '.$advertid.'.
                                 <br> Please login to your account to view their application details from the ads page. Relevant uploaded CV is also attatched to this mail.
@@ -66,8 +67,6 @@
                                 Thank you for using Futureseekers.lk!';
                                 
                     $CVpath = './uploads/'.$file->getName(); // gets the path of the uploaded CV
-
-
                              
                     $email = \Config\Services::email(); // loads email instance from config/Email.php
 

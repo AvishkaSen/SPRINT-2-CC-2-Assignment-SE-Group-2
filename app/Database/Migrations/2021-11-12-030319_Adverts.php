@@ -16,6 +16,11 @@ class Adverts extends Migration
                 'unsigned'=>true,
                 'auto_increment'=>true
             ],
+            'advertowner'=>[
+                'type'=>'INT',
+                'constraint'=>5,
+                'unsigned'=>true,
+            ],
             'jobname'=>[ // job's title section
                 'type'=>'VARCHAR',
                 'constraint'=>255,

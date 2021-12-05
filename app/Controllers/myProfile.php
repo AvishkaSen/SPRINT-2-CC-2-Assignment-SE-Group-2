@@ -14,9 +14,29 @@
     // Deletes the user account
     public function deleteAcc($id){
 
+      session();
+
       // gets the database
-      $model = new \App\Models\userModel;
-      $model->delete($id);
+      $model = new \App\Models\userModel; // gets the Users database model
+      $adModel = new \App\Models\adModel; // gets the Advert database model
+      $applyModel = new \App\Models\applyModel; // gets the Apply database model
+      $profileModel = new \App\Models\companyProfileModel; // gets the company profile database model
+
+      $adModel -> query("DELETE FROM adverts WHERE advertowner = $id"); // deletes all ads that the user owns
+      
+      //checks user session if user is a company 
+      if($_SESSION['Type of User'] == 'Company'){
+
+        $profileModel -> query("DELETE FROM companyprofile WHERE company_acc = $id"); // deletes their profile information
+        $applyModel -> query("DELETE FROM advertapply WHERE advertowner = $id"); // deletes all applicant applies that the user had on their job adverts
+
+      } else if ($_SESSION['Type of User'] == 'Applicant'){
+
+        $applyModel -> query("DELETE FROM advertapply WHERE applicantid = $id"); // deletes all applicant applies that they applied to
+
+      }
+
+      $model->delete($id); // deletes the user account
 
       // destroys the session
       $session = session(); 
@@ -24,11 +44,12 @@
 
       // account deleted message alert
       echo '<div class="alert">
-      <strong> SUCCESS! </strong> Your Account has been successfully deleted!
+      <strong> SUCCESS! </strong> Your Account and related job ads (if any) have been successfully deleted!
       </div>';
 
-      // redirects user to the landing page
-      return view('landing.php');
+      // redirects user to the base landing page
+      return redirect()->to('/');
+      
     }
 
 
@@ -39,6 +60,8 @@
       $userID = session() -> get('UserID'); // Gets the user ID from the session
       
       $model = new \App\Models\userModel; // gets the database model
+      $adModel = new \App\Models\adModel; 
+
 
       // gets the specific form data and assigns to variables 
       $fname = $this->request->getPost('fname');
@@ -46,8 +69,15 @@
       $email = $this->request->getPost('email');
 
       // runs the update query and changes the details
-      $model -> query("UPDATE registrations SET fname = '$fname' , lname = '$lname' , email = '$email' WHERE id = $userID");
+      $model -> query("UPDATE registrations SET fname = '$fname' , lname = '$lname' , email = '$email' WHERE id = $userID"); // updates the user's details
 
+      // checks if the user is a company
+      if($_SESSION['Type of User'] == 'Company'){
+
+        $adModel -> query("UPDATE adverts SET poster = '$email' WHERE advertowner = $userID"); // updates the email in all owned adverts
+        
+      } 
+      
       // Changes the current session variables
       $_SESSION["First Name"] = "$fname";
       $_SESSION["Last Name"] = "$lname";

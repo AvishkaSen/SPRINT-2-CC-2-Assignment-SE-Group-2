@@ -193,7 +193,7 @@
                                     <div class="row mt-3">
                                         <div class="col-md-12">
                                             <label class="labels">Email Address</label>
-                                            <input type="text" class="form-control" placeholder="email address" name="email" required>
+                                            <input type="email" class="form-control" placeholder="email address" name="email" required>
                                         </div>
                                     </div>
 
@@ -260,7 +260,7 @@
                             <div class="profile px-5 py-5 border border-danger">
                                 <label> <b> Your account is not approved by our site admins! </b></label>
                                 <label> <i> You will be able to edit your company profile to jobs after your account gets approved. </i> </label>
-                                <label> <i> Please make necessary payment fees and email the bank statement to out customer support at 'help@futureseekers.lk', and our admins will approve your company account within 24 hours. </i> </label>
+                                <label> <i> Please make necessary payment fees and email the bank statement to out customer support at 'futureseekershelp@gmail.com', and our admins will approve your company account within 24 hours. </i> </label>
                             </div>
 
                         </div>

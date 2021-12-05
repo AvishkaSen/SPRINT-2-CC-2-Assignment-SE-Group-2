@@ -105,7 +105,8 @@
                                 <?php
 
                                     // This is used for applying to an ad. Will show who owns the advert in the AdvertApply table 
-                                    session()->set('AdvertOwner', $row -> poster);
+                                    session()->set('AdvertOwner', $row -> advertowner);
+                                    session()->set('AdvertEmail', $row -> poster);
 
                                     if(!isset($_SESSION['AdvertID'])) {
 
@@ -199,6 +200,7 @@
                             $userId = session()->get('UserID'); // Gets the logged in user's ID from the session
                             $advertID = session()->get('AdvertID'); // Gets the currecnt job advert ID from the session
                             $advertOwner = session()->get('AdvertOwner'); // Gets the job advert owner from the session
+                            $advertEmail = session()->get('AdvertEmail'); // Gets the job advert owner's email from the session 
 
                         ?>
 
@@ -270,6 +272,7 @@
                                                         <input type="hidden" name="applicantid" value="<?php echo $userId?>">  <!-- Applying applicant's ID -->
                                                         <input type="hidden" name="advertid" value="<?php echo $advertID?>"> <!-- current advert's ID -->
                                                         <input type="hidden" name="advertowner" value="<?php echo $advertOwner?>"> <!-- advert owner's ID -->
+                                                        <input type="hidden" name="advertemail" value="<?php echo $advertEmail?>"> <!-- advert owner's ID (for sending email) --> 
 
                                                         <!-- apply to this button -->
                                                         <div class="col-md-12">
@@ -312,7 +315,9 @@
                 // This is to bypass the "unidefined array key" error message for below session checking 
 
             } 
-            else if($_SESSION["Email"] == $row -> poster|| $_SESSION["Type of User"] == "Admin")
+
+            // Checks if user is the same as the advert owner OR if they are an admin
+            else if($_SESSION["UserID"] == $_SESSION["AdvertOwner"] || $_SESSION["Type of User"] == "Admin")
             {
 
             session();
@@ -485,13 +490,13 @@
 
                                             session();
 
-                                            $adsModel = new \App\Models\applyModel;
+                                            $applyModel = new \App\Models\applyModel;
 
                                             // Gets the currecnt job advert ID from the session
                                             $advertID = session()->get('AdvertID'); 
 
                                             // Runs query to get approved ads of the user
-                                            $query = $adsModel -> query("SELECT * FROM advertapply WHERE advertid = '$advertID'"); 
+                                            $query = $applyModel -> query("SELECT * FROM advertapply WHERE advertid = '$advertID'"); 
 
                                             foreach ($query -> getResult() as $row){
 

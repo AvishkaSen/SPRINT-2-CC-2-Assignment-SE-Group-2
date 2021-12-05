@@ -76,10 +76,11 @@
                                     session();
 
                                     $adsModel = new \App\Models\adModel;
-                                    $user = session() -> get('Email'); // Gets the user ID from the session
+                                    //$user = session() -> get('Email'); // Gets the user ID from the session
+                                    $userID = session() -> get('UserID'); // Gets the user ID from the session
 
                                     // Runs query to get approved ads of the user
-                                    $query = $adsModel -> query("SELECT * FROM adverts WHERE poster = '$user' AND approved = 'Yes'"); 
+                                    $query = $adsModel -> query("SELECT * FROM adverts WHERE advertowner = '$userID' AND approved = 'Yes'"); 
 
                                     foreach ($query -> getResult() as $row){
 
@@ -143,7 +144,7 @@
                                     $user = session() -> get('Email'); // Gets the user ID from the session
 
                                     // Runs query to get unapproved ads of the user
-                                    $query = $adsModel -> query("SELECT * FROM adverts WHERE poster = '$user' AND approved = 'No'"); 
+                                    $query = $adsModel -> query("SELECT * FROM adverts WHERE advertowner = '$userID' AND approved = 'No'"); 
 
                                     foreach ($query -> getResult() as $row){
 

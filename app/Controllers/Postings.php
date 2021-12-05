@@ -28,10 +28,11 @@ class Postings extends BaseController
       // below checks if user is an admin, applicant or company account
     } else if ($_SESSION["Type of User"] == "Company") { 
 
-      if(isset($_SESSION['AdvertID']) || isset($_SESSION['AdvertOwner'])){
+      if(isset($_SESSION['AdvertID']) || isset($_SESSION['AdvertOwner']) || isset($_SESSION['AdvertEmail'])){
       
         session()->remove('AdvertID');
         session()->remove('AdvertOwner');
+        session()->remove('AdvertEmail');
 
         return view('Company/myads.php');
 
@@ -43,11 +44,12 @@ class Postings extends BaseController
       
     } else if ($_SESSION["Type of User"] == "Admin") {
 
-      if(isset($_SESSION['AdvertID']) || isset($_SESSION['AdvertOwner'])){
+      if(isset($_SESSION['AdvertID']) || isset($_SESSION['AdvertOwner']) || isset($_SESSION['AdvertEmail'])){
 
         // if the user is an admin
         session()->remove('AdvertID');
         session()->remove('AdvertOwner');
+        session()->remove('AdvertEmail');
 
         return view('Admin/adminads.php');
 
@@ -59,11 +61,12 @@ class Postings extends BaseController
 
     } else if ($_SESSION["Type of User"] == "Applicant") {
 
-      if(isset($_SESSION['AdvertID']) || isset($_SESSION['AdvertOwner'])){
+      if(isset($_SESSION['AdvertID']) || isset($_SESSION['AdvertOwner']) || isset($_SESSION['AdvertEmail'])){
 
         // if the user is an applicant
         session()->remove('AdvertID');
         session()->remove('AdvertOwner');
+        session()->remove('AdvertEmail');
 
         return view('jobs.php');
 

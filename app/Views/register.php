@@ -93,7 +93,7 @@
 
                             <label class="labels">Account Type:</label>
                             <div class="choice p-2">
-                                <input type="radio" name="type" value="Company"> <span>Company</span>
+                                <input type="radio" name="type" value="Company" required> <span>Company</span>
                                 <input type="radio" name="type" value="Applicant"> <span>Applicant</span>
                             </div>
 

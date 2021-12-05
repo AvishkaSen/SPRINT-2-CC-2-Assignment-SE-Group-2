@@ -41,7 +41,8 @@
     <?php 
         
         session();
-        $userID = session() -> Email; // Gets the userID from the session
+        $userID = session() -> UserID; // Gets the userID from the session
+        $userEmail = session() -> Email; // Gets the user email from the session
 
         // Checks if the user account is approved or not
         if($_SESSION["Approved"] == "Yes") 
@@ -170,7 +171,8 @@
                                     </div>
 
                                     <!-- default information -->
-                                    <input type="hidden" class="form-control" name="poster" value="<?php echo $userID?>"> <!-- Links advertisement to company account email-->
+                                    <input type="hidden" class="form-control" name="advertowner" value="<?php echo $userID?>"> <!-- Links advertisement to company account's ID-->
+                                    <input type="hidden" class="form-control" name="poster" value="<?php echo $userEmail?>"> <!-- Links advertisement to company account's ID-->
                                     <input type="hidden" class="form-control" name="approved" value="No"> <!-- Sets ads to unapproved by default for Admin approval-->
 
                                     <div class="col-md-12">
@@ -198,7 +200,7 @@
             <br>
             <b>Your account is not approved yet by our site Admins. You can post jobs after being approved! </b>
             <br>
-            <i> Please make necessary payments fees and email the bank statement to out customer support at 'help@futureseekers.lk', and our admins will approve your company account within 24 hours. </i>
+            <i> Please make necessary payments fees and email the bank statement to out customer support at 'futureseekershelp@gmail.com', and our admins will approve your company account within 24 hours. </i>
         </div>;
     
     <?php

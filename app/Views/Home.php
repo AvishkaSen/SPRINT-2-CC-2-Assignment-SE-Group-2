@@ -41,7 +41,7 @@
                     <p> You can also search for job openings by company name, job title, or job location, and remote work. </p>
                     <br><br>
                     <p> For any FutureSeekers inquiries, please send an email to our support service team </p>
-                    <p> <i> help@futureseekers.lk </i> </p>
+                    <p> <i> futureseekershelp@gmail.com </i> </p>
 
                 </div>
             </div>
