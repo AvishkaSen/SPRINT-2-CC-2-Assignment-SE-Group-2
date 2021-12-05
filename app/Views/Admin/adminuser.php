@@ -30,7 +30,7 @@
                 <li><a href="<?php echo base_url('Admin/index')?>">Dashboard</a></li>
                 <li><a href="<?php echo base_url('Admin/users')?>">Users</a></li>
                 <li><a href="<?php echo base_url('Admin/ads')?>">Job Adverts</a></li>
-                <li><a href="">Reports</a></li>
+                <li><a href="#">Reports</a></li>
                 <li><a href="<?php echo base_url('myProfile/index')?>">My Profile</a></li>
             </ul>
         </nav>
