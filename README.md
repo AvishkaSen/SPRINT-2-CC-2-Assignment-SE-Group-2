@@ -15,7 +15,7 @@ Methods of use:
 - And in that folder, pull this repository 
 - Start XAMPP Apache and MySQL service models 
 
-In the search bar the file directory, type 'cmd' (or powershell)
+In the address bar of the file directory, type 'cmd' (or powershell)
 and type:
 
 ```
